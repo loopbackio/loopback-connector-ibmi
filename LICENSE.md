@@ -1,5 +1,5 @@
-Copyright (c) IBM Corp. 2015,2017. All Rights Reserved.
-Node module: loopback-connector-db2iseries
+Copyright (c) IBM Corp. 2015,2019. All Rights Reserved.
+Node module: loopback-connector-ibmi (s derivative of loopback-connector-db2iseries)
 This project is licensed under the Artistic License 2.0, full text below.
 
 --------
