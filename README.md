@@ -10,6 +10,7 @@ The LoopBack Db2 for i connector supports:
 
 ## Major differences from version 0.x of loopback-connector-ibmi
 This version of the module is significantly different from version 0.x and constitutes a complete rewrite. This project is a derivative of [loopback-connector-db2iseries](https://github.com/strongloop/loopback-connector-db2iseries). 
+The original 0.x codebase can be found [here](https://github.com/andrescolodrero/loopback-connector-ibmi).
 
 The main difference between this and the other packages for IBM i (including v0.x of this package) is that it uses ODBC to communicate to the database. Version 0.x of this package was built using the Db2 for i CLI API set, hence the need for important prerequisites (below). 
 
