@@ -1,7 +1,7 @@
 {
-  "name": "loopback-connector-db2iseries",
-  "version": "3.0.0",
-  "description": "LoopBack Connector for IBM DB2 iSeries",
+  "name": "loopback-connector-ibmi",
+  "version": "0.0.0",
+  "description": "LoopBack Connector for Db2 on the IBM i",
   "engines": {
     "node": ">=4"
   },
@@ -12,7 +12,10 @@
     "DB2",
     "DataSource",
     "Connector",
-    "iSeries"
+    "IBM i",
+    "odbc",
+    "idb-pconnector",
+    "idb-connector"
   ],
   "main": "index.js",
   "scripts": {
@@ -28,11 +31,13 @@
     "strong-globalize": "^2.8.2"
   },
   "devDependencies": {
+    "eslint": "^5.15.3",
     "bluebird": "^2.9.9",
-    "eslint": "^2.13.1",
-    "eslint-config-loopback": "^4.0.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-loopback": "^13.0.0",
+    "eslint-plugin-import": "^2.16.0",
     "loopback-datasource-juggler": "^2.43.0",
-    "mocha": "^2.3.4",
+    "mocha": "^6.0.2",
     "rc": "^1.1.5",
     "should": "^8.1.1",
     "sinon": "^1.17.2"
