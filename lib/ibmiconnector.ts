@@ -12,7 +12,7 @@ abstract class LoopbackConnector {
   }
 
   abstract executeSQL(sql: string, parameters: any[], options: object, callback: Function): void;
-  abstract executeSQL(sql: string, options: object, callback: Function): void;
+  // abstract executeSQL(sql: string, options: object, callback: Function): void;
   abstract toColumnValue(propertyDef: object, value: any): ParameterizedSQL;
   abstract fromColumnValue(propertyDef: object, value: any): any;
 
@@ -77,13 +77,15 @@ interface LoopbackConnectorDiscovery {
 }
 
 
-class IBMiConnector extends LoopbackConnector implements LoopbackConnectorDiscovery, LoopbackConnectorMigration {
+class IBMiConnector extends LoopbackConnector implements LoopbackConnectorDiscovery, LoopbackConnectorMigration, LoopbackConnectorTransaction {
+
+  private pool;
 
   executeSQL(sql: string, parameters: any[], options: object, callback: Function): void {
-
+    this.pool.query(sql, parameters, callback);
   }
 
-  executeSQL(sql: string, options: object, callback: Function): void {
+  isActual(models: string|string[], callback: Function) {
 
   }
 
