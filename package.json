@@ -1,6 +1,6 @@
 {
   "name": "loopback-connector-ibmi",
-  "version": "0.0.0",
+  "version": "1.0.0-beta.0",
   "description": "LoopBack Connector for Db2 on the IBM i",
   "engines": {
     "node": ">=4"
@@ -27,7 +27,7 @@
     "async": "^1.5.0",
     "debug": "^2.2.0",
     "loopback-connector": "^4.0.0",
-    "odbc": "^2.0.0-beta.0",
+    "odbc": "^2.0.0-beta.1",
     "strong-globalize": "^2.8.2"
   },
   "devDependencies": {
@@ -37,16 +37,16 @@
     "eslint-config-loopback": "^13.0.0",
     "eslint-plugin-import": "^2.16.0",
     "loopback-datasource-juggler": "^2.43.0",
-    "mocha": "^6.1.1",
+    "mocha": "^6.1.4",
     "rc": "^1.1.5",
     "should": "^8.1.1",
     "sinon": "^1.17.2"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/strongloop/loopback-connector-db2iseries.git"
+    "url": "git://github.com/https://github.com/markdirish/loopback-connector-ibmi.git"
   },
-  "homepage": "https://github.com/strongloop/loopback-connector-db2iseries",
+  "homepage": "https://github.com/markdirish/loopback-connector-ibmi",
   "bugs": {
     "url": "https://github.com/strongloop/loopback-connector-db2iseries/issues"
   },
