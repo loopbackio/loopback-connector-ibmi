@@ -1,6 +1,6 @@
 # loopback-connector-ibmi
 
-This is a database connectior for Db2 on IBM i intended for use with LoopBack 3 (LoopBack 4 testing soon). It uses the npm `odbc` package to connect to the database, so installing the required files and setting up a datasource is required for use (see below).
+This is a database connectior for Db2 on IBM i intended for use with LoopBack 3 (LoopBack 4 testing soon). It uses the npm `odbc` package to connect to the database, so installing an ODBC driver manager and driver and setting up a datasource is required for use (see below).
 
 ## Major differences from version 0.x of loopback-connector-ibmi
 This version of the module is significantly different from version 0.x and constitutes a complete rewrite. This project is a derivative of [loopback-connector-db2iseries](https://github.com/strongloop/loopback-connector-db2iseries) and the v0.x [loopback-connector-ibmi](https://github.com/andrescolodrero/loopback-connector-ibmi).
@@ -13,7 +13,6 @@ This package is primarily developed and tested with the IBM i Access ODBC driver
 
 ### On IBM i
 - Install the `unixODBC-devel` package. See [the RPM and yum documentation for IBM i](http://ibm.biz/ibmi-rpms) for more detailed steps.
-- TBD
 ### On Linux
 - Install the `unixODBC-devel` package with your operating system's package manager (apt-get, zypper, yum, etc).
 - Install the "Linux Application Package" of IBM i Access Client Solutions. Consult [this document](http://www-01.ibm.com/support/docview.wss?uid=nas8N1010355) for assistance.
@@ -50,13 +49,13 @@ This will generate an entry in your `server/datasources.json` file. It should kn
     "connector": "loopback-connector-ibmi"
   }
   ```
-You should edit this entry to add information on how to connect to Db2. For `loopback-connector-ibmi`, you need to pass either a `connectionString`, or pass your `username`, `password`, and `database` name (which will be the DSN name you set up for your ODBC driver).
+You should edit this entry to add information on how to connect to Db2. For `loopback-connector-ibmi`, you need to pass either a `connectionString`, or pass your `username`, `password`, and `dsn` (which will be the DSN name you set up for your ODBC driver).
 
 ```json
 "test": {
   "name": "test",
   "connector": "loopback-connector-ibmi",
-  "connectionString": "DSN=MYDSN;UID=FIRSTLAST;PWD=password123"
+  "connectionString": "DSN=MYDSN"
 }
 ```
 
@@ -84,7 +83,6 @@ schema         | String  | Specifies the default schema name that is used to qua
 
 **More connector properties will be added as requested by the community**
 
-
 Alternatively, you can create and configure the data source in JavaScript code.
 For example:
 
@@ -105,6 +103,7 @@ var User = db.define('User', {
   email: { type: String },
 });
 
+// Will make sure that 'User' table has the same format as the model
 db.autoupdate('User', function(err) {
   if (err) {
     console.log(err);
