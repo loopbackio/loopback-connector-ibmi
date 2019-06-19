@@ -1,11 +1,20 @@
 # loopback-connector-ibmi
 
+
 This is a database connectior for Db2 on IBM i intended for use with LoopBack 3 (LoopBack 4 testing soon). It uses the npm `odbc` package to connect to the database, so installing an ODBC driver manager and driver and setting up a datasource is required for use (see below).
+
+[IBM® Db2® for i](http://www-03.ibm.com/systems/power/software/i/db2/) is the database of choice for robust, enterprise-wide solutions handling high-volume workloads. It is optimized to deliver industry-leading performance while lowering costs and is fully integrated into the [IBM i operating system](https://www.ibm.com/it-infrastructure/power/os/ibm-i).  The `loopback-connector-ibmi`
+module is the LoopBack connector for Db2 for i.
 
 ## Major differences from version 0.x of loopback-connector-ibmi
 This version of the module is significantly different from version 0.x and constitutes a complete rewrite. This project is a derivative of [loopback-connector-db2iseries](https://github.com/strongloop/loopback-connector-db2iseries) and the v0.x [loopback-connector-ibmi](https://github.com/andrescolodrero/loopback-connector-ibmi).
 
-The main difference between this and the other packages for IBM i (including v0.x of this package) is that it uses ODBC to communicate to the database. Version 0.x of this package was built using the Db2 for i CLI API set, hence the need for important prerequisites (below). 
+The main difference between this and the other packages for IBM i (including v0.x of this package) is that it uses ODBC to communicate to the database. Version 0.x of this package was built using the Db2 for i CLI API set. 
+
+## Major differences from loopback-connector-db2iseries
+- `loopback-connector-db2iseries` is powered by the [IBM Data Server Driver for ODBC and CLI](https://www.ibm.com/support/knowledgecenter/en/SSEPGG_9.7.0/com.ibm.swg.im.dbclient.install.doc/doc/c0023452.html). As noted, this package is powered by the IBM i Access ODBC driver. There may be differences in functionality as a result. From a server protocol perspective, `loopback-connector-db2iseries` module uses [DRDA](https://www.ibm.com/support/knowledgecenter/en/SSGU8G_11.70.0/com.ibm.admin.doc/ids_admin_0206.htm), and this module uses the [IBM i Host Servers](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_73/rzajr/rzajrmst27.htm) used by the rest of the IBM i Access family.
+- `loopback-connector-db2iseries` requires separate licensing to be fully functional. This module does not.
+- This package requires manual installation of prerequisites (see below), whereas `loopback-connector-db2iseries` can handle this automatically as part of the npm install
 
 ## Prerequisites
 Before installing this package, you will need an ODBC driver and a driver manager (with development libraries). 
