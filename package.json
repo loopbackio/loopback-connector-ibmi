@@ -3,8 +3,9 @@
   "version": "1.0.0-beta.0",
   "description": "LoopBack Connector for Db2 on the IBM i",
   "engines": {
-    "node": ">=4"
+    "node": ">=8"
   },
+  "author": "IBM Corp.",
   "keywords": [
     "IBM",
     "StrongLoop",
@@ -27,7 +28,7 @@
     "async": "^1.5.0",
     "debug": "^2.2.0",
     "loopback-connector": "^4.0.0",
-    "odbc": "^2.0.0-beta.1",
+    "odbc": "^2.0.0-4",
     "strong-globalize": "^2.8.2"
   },
   "devDependencies": {
@@ -44,11 +45,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/https://github.com/markdirish/loopback-connector-ibmi.git"
+    "url": "https://github.com/strongloop/loopback-connector-ibmi.git"
   },
-  "homepage": "https://github.com/markdirish/loopback-connector-ibmi",
+  "homepage": "https://github.com/strongloop/loopback-connector-ibmi",
   "bugs": {
-    "url": "https://github.com/strongloop/loopback-connector-db2iseries/issues"
+    "url": "https://github.com/strongloop/loopback-connector-ibmi/issues"
   },
   "license": "Artistic-2.0"
 }
