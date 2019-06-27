@@ -1,6 +1,6 @@
 {
   "name": "loopback-connector-ibmi",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.1",
   "description": "LoopBack Connector for Db2 on the IBM i",
   "engines": {
     "node": ">=8"
