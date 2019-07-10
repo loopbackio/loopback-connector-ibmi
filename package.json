@@ -1,6 +1,6 @@
 {
   "name": "loopback-connector-ibmi",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.1",
   "description": "LoopBack Connector for Db2 on the IBM i",
   "engines": {
     "node": ">=4"
@@ -27,7 +27,7 @@
     "async": "^1.5.0",
     "debug": "^2.2.0",
     "loopback-connector": "^4.0.0",
-    "odbc": "^2.0.0-beta.1",
+    "odbc": "^2.0.0-4",
     "strong-globalize": "^2.8.2"
   },
   "devDependencies": {
