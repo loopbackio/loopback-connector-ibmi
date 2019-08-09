@@ -27,7 +27,11 @@
     "async": "^1.5.0",
     "debug": "^2.2.0",
     "loopback-connector": "^4.0.0",
+<<<<<<< HEAD
     "odbc": "^2.0.0-4",
+=======
+    "odbc": "^2.1.2",
+>>>>>>> Update odbc to 2.1.2
     "strong-globalize": "^2.8.2"
   },
   "devDependencies": {
