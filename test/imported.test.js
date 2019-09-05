@@ -1,11 +1,11 @@
 // Copyright IBM Corp. 2016. All Rights Reserved.
-// Node module: loopback-connector-db2iseries
+// Node module: loopback-connector-ibmi
 // This file is licensed under the Artistic License 2.0.
 // License text available at https://opensource.org/licenses/Artistic-2.0
 
 'use strict';
 
-var describe = require('./describe');
+const describe = require('./describe');
 
 /* eslint-env node, mocha */
 describe('db2 imported features', function() {

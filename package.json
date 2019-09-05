@@ -20,19 +20,17 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha --timeout 15000 --require test/init.js",
+    "test": "mocha --timeout 150000 --require test/init.js",
     "posttest": "npm run lint"
   },
   "dependencies": {
     "async": "^1.5.0",
     "debug": "^2.2.0",
     "loopback-connector": "^4.0.0",
-<<<<<<< HEAD
-    "odbc": "^2.0.0-4",
-=======
-    "odbc": "^2.1.2",
->>>>>>> Update odbc to 2.1.2
-    "strong-globalize": "^2.8.2"
+    "odbc": "^2.2.0",
+    "strong-globalize": "^2.8.2",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.21"
   },
   "devDependencies": {
     "bluebird": "^2.9.9",
@@ -48,9 +46,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/https://github.com/markdirish/loopback-connector-ibmi.git"
+    "url": "git://github.com/https://github.com/strongloop/loopback-connector-ibmi.git"
   },
-  "homepage": "https://github.com/markdirish/loopback-connector-ibmi",
+  "homepage": "https://github.com/strongloop/loopback-connector-ibmi",
   "bugs": {
     "url": "https://github.com/strongloop/loopback-connector-db2iseries/issues"
   },

@@ -1,11 +1,11 @@
 // Copyright IBM Corp. 2016. All Rights Reserved.
-// Node module: loopback-connector-db2iseries
+// Node module: loopback-connector-ibmi
 // This file is licensed under the Artistic License 2.0.
 // License text available at https://opensource.org/licenses/Artistic-2.0
 
 'use strict';
 
-var describe = require('./describe');
+const describe = require('./describe');
 
 /* eslint-env node, mocha */
 process.env.NODE_ENV = 'test';
@@ -13,26 +13,24 @@ process.env.NODE_ENV = 'test';
 require('./init.js');
 require('should');
 
-var Transaction = require('loopback-connector').Transaction;
+const Transaction = require('loopback-connector').Transaction;
 
-var db, Post;
+let db, Post;
 
-describe('transactions', function() {
+describe.skip('transactions', function() {
   describe('commit and rollback', function() {
     before(function(done) {
       db = global.getDataSource();
-
-      Post = db.define('PostTX', {
-        title: {type: String, length: 255, index: true},
-        content: {type: String},
+      db.once('connected', function() {
+        Post = db.define('PostTX', {
+          title: {type: String, length: 255, index: true},
+          content: {type: String},
+        });
+        db.automigrate(['PostTX'], done);
       });
-
-      Post.destroyAll(done);
-      // db.automigrate('PostTX', done);
-      // done();
     });
 
-    var currentTx;
+    let currentTx;
     // Return an async function to start a transaction and create a post
     function createPostInTx(post) {
       return function(done) {
@@ -56,7 +54,7 @@ describe('transactions', function() {
     // records to equal to the count
     function expectToFindPosts(where, count, inTx) {
       return function(done) {
-        var options = {};
+        const options = {};
         if (inTx) {
           options.transaction = currentTx;
         }
@@ -71,11 +69,11 @@ describe('transactions', function() {
     }
 
     describe('commit', function() {
-      var post = {title: 't1', content: 'c1'};
+      const post = {title: 't1', content: 'c1'};
       before(createPostInTx(post));
 
       it('should not see the uncommitted insert',
-         expectToFindPosts(post, 0, false));
+        expectToFindPosts(post, 0, false));
 
       it('should see the uncommitted insert from the same transaction',
         expectToFindPosts(post, 1, true));
@@ -88,7 +86,7 @@ describe('transactions', function() {
     });
 
     describe('rollback', function() {
-      var post = {title: 't2', content: 'c2'};
+      const post = {title: 't2', content: 'c2'};
       before(createPostInTx(post));
 
       it('should not see the uncommitted insert',
