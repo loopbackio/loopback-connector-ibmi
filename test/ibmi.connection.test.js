@@ -21,7 +21,7 @@ before(function() {
 
 describe('testConnection', function() {
   it('should pass with valid settings', function(done) {
-    const db = new DataSource(require('../'), config);
+    const db = new DataSource(require('..'), config);
     db.ping(function(err) {
       assert(!err, 'Should connect without err.');
       db.disconnect(done);
@@ -34,7 +34,7 @@ describe('testConnection', function() {
       connectionString: dsn,
     };
 
-    const db = new DataSource(require('../'), dbConfig);
+    const db = new DataSource(require('..'), dbConfig);
     db.ping(function(err) {
       assert(!err, 'Should connect without err.');
       db.disconnect(done);
@@ -52,7 +52,7 @@ describe('testConnection', function() {
       password: 'invalid-password',
     };
 
-    const db = new DataSource(require('../'), dbConfig);
+    const db = new DataSource(require('..'), dbConfig);
     db.ping(function(err) {
       assert(!err, 'Should connect without err.');
       db.disconnect(done);

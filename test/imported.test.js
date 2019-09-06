@@ -8,7 +8,7 @@
 const describe = require('./describe');
 
 /* eslint-env node, mocha */
-describe('db2 imported features', function() {
+describe('ibmi imported features', function() {
   before(function() {
     require('./init.js');
   });
