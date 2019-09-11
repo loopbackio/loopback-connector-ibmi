@@ -7,7 +7,8 @@
 
 module.exports = require('should');
 
-const DataSource = require('loopback-datasource-juggler').DataSource;
+const juggler = require('loopback-datasource-juggler');
+let DataSource = juggler.DataSource;
 
 let db = undefined;
 
@@ -27,6 +28,13 @@ global.getDataSource = global.getSchema = function(options) {
 global.connectorCapabilities = {
   ilike: false,
   nilike: false,
+};
+
+global.resetDataSourceClass = function(ctor) {
+  DataSource = ctor || juggler.DataSource;
+  const promise = db ? db.disconnect() : Promise.resolve();
+  db = undefined;
+  return promise;
 };
 
 global.sinon = require('sinon');

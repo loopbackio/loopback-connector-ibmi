@@ -1,6 +1,6 @@
 {
   "name": "loopback-connector-ibmi",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0",
   "description": "LoopBack Connector for Db2 on the IBM i",
   "engines": {
     "node": ">=4"
@@ -20,14 +20,14 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha --timeout 150000 --require test/init.js",
+    "test": "mocha --timeout 30000  test/*.test.js node_modules/juggler-v3/test.js",
     "posttest": "npm run lint"
   },
   "dependencies": {
     "async": "^1.5.0",
     "debug": "^2.2.0",
     "loopback-connector": "^4.8.0",
-    "odbc": "^2.2.0",
+    "odbc": "../../odbc/node-odbc",
     "strong-globalize": "^2.8.2",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.21"
@@ -38,7 +38,9 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-loopback": "^13.0.0",
     "eslint-plugin-import": "^2.16.0",
-    "loopback-datasource-juggler": "^4.12.1",
+    "juggler-v3": "file:./deps/juggler-v3",
+    "juggler-v4": "file:./deps/juggler-v4",
+    "loopback-datasource-juggler": "^3.0.0 || ^4.0.0",
     "mocha": "^6.1.4",
     "rc": "^1.1.5",
     "should": "^8.1.1",
