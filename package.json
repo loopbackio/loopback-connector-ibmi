@@ -20,14 +20,14 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha --timeout 30000  test/*.test.js node_modules/juggler-v3/test.js",
+    "test": "mocha --timeout 180000  test/*.test.js node_modules/juggler-v3/test.js node_modules/juggler-v4/test.js",
     "posttest": "npm run lint"
   },
   "dependencies": {
     "async": "^1.5.0",
     "debug": "^2.2.0",
     "loopback-connector": "^4.8.0",
-    "odbc": "../../odbc/node-odbc",
+    "odbc": "^2.2.1",
     "strong-globalize": "^2.8.2",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.21"

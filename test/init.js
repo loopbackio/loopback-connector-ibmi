@@ -20,6 +20,7 @@ global.config = config;
 
 global.getDataSource = global.getSchema = function(options) {
   if (db === undefined) {
+    console.log('datasource is undefined!');
     db = new DataSource(require('../'), config);
   }
   return db;
