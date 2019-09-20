@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "LoopBack Connector for Db2 on the IBM i",
   "engines": {
-    "node": ">=4"
+    "node": ">=8"
   },
+  "author": "IBM Corp.",
   "keywords": [
     "IBM",
     "StrongLoop",
@@ -52,7 +53,7 @@
   },
   "homepage": "https://github.com/strongloop/loopback-connector-ibmi",
   "bugs": {
-    "url": "https://github.com/strongloop/loopback-connector-db2iseries/issues"
+    "url": "https://github.com/strongloop/loopback-connector-ibmi/issues"
   },
   "license": "Artistic-2.0"
 }
