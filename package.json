@@ -25,13 +25,13 @@
     "posttest": "npm run lint"
   },
   "dependencies": {
-    "async": "^1.5.0",
+    "async": "^3.1.0",
     "debug": "^2.2.0",
     "loopback-connector": "^4.9.0",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.21",
     "odbc": "^2.2.1",
-    "strong-globalize": "^2.8.2"
+    "strong-globalize": "^5.0.2"
   },
   "devDependencies": {
     "bluebird": "^2.9.9",
