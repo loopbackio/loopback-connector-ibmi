@@ -1,15 +1,15 @@
-// Copyright IBM Corp. 2016. All Rights Reserved.
-// Node module: loopback-connector-db2i
+// Copyright IBM Corp. 2016,2019. All Rights Reserved.
+// Node module: loopback-connector-ibmi
 // This file is licensed under the Artistic License 2.0.
 // License text available at https://opensource.org/licenses/Artistic-2.0
 
 'use strict';
 
-var g = require('../lib/globalize');
-var DataSource = require('loopback-datasource-juggler').DataSource;
-var DB2 = require('../'); // loopback-connector-db2i
+const g = require('../lib/globalize');
+const DataSource = require('loopback-datasource-juggler').DataSource;
+const DB2 = require('../'); // loopback-connector-db2i
 
-var config = {
+const config = {
   username: process.env.DB2I_USERNAME,
   password: process.env.DB2I_PASSWORD,
   hostname: process.env.DB2I_HOSTNAME,
@@ -17,9 +17,9 @@ var config = {
   database: 'SQLDB',
 };
 
-var db = new DataSource(DB2, config);
+const db = new DataSource(DB2, config);
 
-var User = db.define('User', {name: {type: String}, email: {type: String},
+const User = db.define('User', {name: {type: String}, email: {type: String},
 });
 
 db.autoupdate('User', function(err) {
