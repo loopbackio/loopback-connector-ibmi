@@ -32,5 +32,5 @@ describe(name, function() {
   );
   const customConfig = Object.assign({}, global.config);
   suite(global.getDataSource(customConfig, juggler.DataSource),
-    should, {replaceOrCreateReportsNewInstance: false});
+    should, {replaceOrCreateReportsNewInstance: true});
 });

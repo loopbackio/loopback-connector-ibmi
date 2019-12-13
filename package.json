@@ -21,7 +21,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha --timeout 180000  test/*.test.js node_modules/juggler-v3/test.js node_modules/juggler-v4/test.js",
+    "test": "mocha --timeout 180000 test/*.test.js node_modules/juggler-v3/test.js node_modules/juggler-v4/test.js",
     "posttest": "npm run lint"
   },
   "dependencies": {
@@ -41,7 +41,7 @@
     "eslint-plugin-import": "^2.16.0",
     "juggler-v3": "file:./deps/juggler-v3",
     "juggler-v4": "file:./deps/juggler-v4",
-    "loopback-datasource-juggler": "^4.13.0",
+    "loopback-datasource-juggler": "3.x || 4.x",
     "mocha": "^6.1.4",
     "rc": "^1.1.5",
     "should": "^8.1.1",
@@ -49,7 +49,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/https://github.com/strongloop/loopback-connector-ibmi.git"
+    "url": "https://github.com/strongloop/loopback-connector-ibmi"
   },
   "homepage": "https://github.com/strongloop/loopback-connector-ibmi",
   "bugs": {
