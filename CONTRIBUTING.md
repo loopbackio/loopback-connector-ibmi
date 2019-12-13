@@ -1,6 +1,7 @@
 ### Contributing ###
 
-Thank you for your interest in `loopback-connector-ibmi`.
+Thank you for your interest in `loopback-connector-ibmi`, an open source project
+administered by StrongLoop.
 
 Contributing to `loopback-connector-ibmi` is easy. In a few simple steps:
 
@@ -10,7 +11,10 @@ Contributing to `loopback-connector-ibmi` is easy. In a few simple steps:
 
   * Make something better or fix a bug.
 
-  * Adhere to code style dictated by the .eslintrc file (airbnb-base style)
+  * Adhere to code style outlined in the [Google C++ Style Guide][] and
+    [Google Javascript Style Guide][].
+
+  * Sign the [Contributor License Agreement](https://cla.strongloop.com/agreements/strongloop/loopback-connector-ibmi)
 
   * Submit a pull request through Github.
 
@@ -142,3 +146,6 @@ Contributing to `loopback-connector-ibmi` is easy. In a few simple steps:
      which You become aware that would make these representations
      inaccurate in any respect. Email us at callback@strongloop.com.
 ```
+
+[Google C++ Style Guide]: https://google.github.io/styleguide/cppguide.html
+[Google Javascript Style Guide]: https://google.github.io/styleguide/javascriptguide.xml

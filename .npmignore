@@ -1,0 +1,10 @@
+.github
+deps
+node_modules
+test
+.eslintignore
+.eslintrc
+.gitattributes
+.gitignore
+.npmignore
+.npmrc

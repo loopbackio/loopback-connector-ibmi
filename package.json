@@ -1,6 +1,6 @@
 {
   "name": "loopback-connector-ibmi",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0",
   "description": "LoopBack Connector for Db2 on the IBM i",
   "engines": {
     "node": ">=8"
@@ -21,15 +21,17 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha --timeout 15000 --require test/init.js",
+    "test": "mocha --timeout 180000 test/*.test.js node_modules/juggler-v3/test.js node_modules/juggler-v4/test.js",
     "posttest": "npm run lint"
   },
   "dependencies": {
-    "async": "^1.5.0",
+    "async": "^3.1.0",
     "debug": "^2.2.0",
-    "loopback-connector": "^4.0.0",
-    "odbc": "^2.1.2",
-    "strong-globalize": "^2.8.2"
+    "loopback-connector": "^4.9.0",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.21",
+    "odbc": "^2.2.2",
+    "strong-globalize": "^5.0.2"
   },
   "devDependencies": {
     "bluebird": "^2.9.9",
@@ -37,7 +39,9 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-loopback": "^13.0.0",
     "eslint-plugin-import": "^2.16.0",
-    "loopback-datasource-juggler": "^2.43.0",
+    "juggler-v3": "file:./deps/juggler-v3",
+    "juggler-v4": "file:./deps/juggler-v4",
+    "loopback-datasource-juggler": "3.x || 4.x",
     "mocha": "^6.1.4",
     "rc": "^1.1.5",
     "should": "^8.1.1",
@@ -45,7 +49,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/strongloop/loopback-connector-ibmi.git"
+    "url": "https://github.com/strongloop/loopback-connector-ibmi"
   },
   "homepage": "https://github.com/strongloop/loopback-connector-ibmi",
   "bugs": {
