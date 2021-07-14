@@ -30,7 +30,7 @@
     "loopback-connector": "^4.9.0",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.21",
-    "odbc": "^2.3.0",
+    "odbc": "^2.4.0",
     "strong-globalize": "^5.0.2"
   },
   "devDependencies": {
